@@ -48,8 +48,7 @@ function handleRequest(proxiedRequest, proxiedResponse) {
 		function handleRawRequest() {
 			var requestOptions = getRawRequestOptions(proxiedRequest);
 
-			console.log("firing " + (requestOptions.port === 443 ? "SSL" : "non-SSL") + " request to: ");
-			console.log(requestOptions);
+			console.log(`requestOptions = ${JSON.stringify(requestOptions)}`);
 
 			var request = null;
 			if (requestOptions.port === 443 || config.forceSSL)
