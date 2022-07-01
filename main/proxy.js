@@ -22,7 +22,7 @@ server.listen(config.proxyPort, handleListening);
 server.on("request", handleRequest);
 
 function handleListening() {
-	console.log("proxy started, listening on port " + config.proxyPort);
+	console.log("Khoi tao proxy, lang nghe cong: " + config.proxyPort);
 }
 
 /**
@@ -175,7 +175,7 @@ function scanParameters(parameters) {
 			if (parameters.hasOwnProperty(key)) {
 				for (var index = 0; index < patterns.length; index++) {
 					if (patterns[index].regex.test(parameters[key])) {
-						console.log("Xác định lỗi: " + patterns[index].description);
+						console.log("Xac dinh loi: " + patterns[index].description);
 						return patterns[index].description;
 					}
 				}
